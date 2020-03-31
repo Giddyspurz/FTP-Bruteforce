@@ -1,12 +1,12 @@
 # FTP-Bruteforce
 FTPBrute Script
 
-A Script for Bruteforcing User & Password in FTP Servers
+A Tool for Bruteforcing Users & Passwords in FTP Servers.
 
-If Scripts does not work add file path of the wordlist.txt in the script.
+This Tool is for Educational Purposes.
 
-This Sctipt is for Educational Purposes
+Use Proxychains while executing this Tool.
 
-I will not be Liable for Wrong Use of this Script.
+I will not be Liable for Wrong Use of this Tool.
 
 Nice time hacking pal :-)
