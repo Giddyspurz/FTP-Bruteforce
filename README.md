@@ -1,6 +1,7 @@
-# FTP-Bruteforce
-
-FTP-BRUTEFORCE
+#   _____________      ___  ___  __  ____________
+  / __/_  __/ _ \____/ _ )/ _ \/ / / /_  __/ __/
+ / _/  / / / ___/___/ _  / , _/ /_/ / / / / _/  
+/_/   /_/ /_/      /____/_/|_|\____/ /_/ /___/  
 
 A Tool for Bruteforcing Users & Passwords in FTP Servers.
 
