@@ -54,7 +54,8 @@ def connect_ftp():
 			print(e)
 		else:
 			print(f"{Fore.GREEN}[+]Found credentials: ")
-			file = open(Found credentials.txt, "w")
+			file.open(Found credentials.txt, "w")
+			file.close
 			print(f"\tHost: {host}")
 			print(f"\tUser: {user}")
 			print(f"\tPassword: {password}{Fore.RESET}")
